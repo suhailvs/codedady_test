@@ -1,6 +1,16 @@
-# taotter-backend
+# codedady-backend
 
-Repository for Taotter backend application
+Repository for codedady
+
+
+
+Install PostgreSQL::
+
+	$ apt-get install postgresql postgresql-contrib
+	$ sudo -u postgres psql
+	ALTER USER postgres WITH PASSWORD 'xxx';
+	create database codedady;
+	\q
 
 ## Migrate and Populate Database
 
@@ -11,11 +21,3 @@ Repository for Taotter backend application
     $ ./manage.py makemigrations
     $ ./manage.py migrate
 	
-
-Install PostgreSQL::
-
-	$ apt-get install postgresql postgresql-contrib
-	$ sudo -u postgres psql
-	ALTER USER postgres WITH PASSWORD 'xxx';
-	create database taotter;
-	\q
