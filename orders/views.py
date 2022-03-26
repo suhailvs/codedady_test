@@ -3,6 +3,9 @@ from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
 from django.contrib.auth import get_user_model
 
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import authentication, permissions
 from rest_framework import viewsets
 
 from .serializers import OrderSerializer, UserSerializer
@@ -44,3 +47,24 @@ class OrderView(viewsets.ModelViewSet):
         if status:
             queryset = queryset.filter(status=status)
         return queryset
+
+
+class TakeOrderView(APIView):
+    """
+    View to take order by a delivery boy.
+
+    * Requires token authentication.
+    * Only admin users are able to access this view.
+    """
+    authentication_classes = [authentication.TokenAuthentication]
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, format=None):
+        order = Order.objects.get(id=request.data['orderid'])
+        msg = 'Order already assigned'
+        if not order.deliveryboy:
+            order.deliveryboy = request.user
+            order.save()
+            msg='Order succussfully assigned.'
+
+        return Response(msg)
