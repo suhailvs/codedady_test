@@ -1,11 +1,18 @@
 from distutils import dist
 from django.contrib.gis.db.models.functions import Distance
 from django.contrib.gis.geos import Point
+from django.contrib.auth import get_user_model
 
 from rest_framework import viewsets
 
-from .serializers import OrderSerializer 
+from .serializers import OrderSerializer, UserSerializer
 from .models import Order
+
+
+
+class UserListAPIView(viewsets.ModelViewSet):
+    queryset = get_user_model().objects.order_by('username')
+    serializer_class = UserSerializer
 
 class OrderView(viewsets.ModelViewSet):
     queryset = Order.objects.order_by('item')

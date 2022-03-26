@@ -42,10 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.gis',
 
     'rest_framework',
+    'rest_framework.authtoken',  # token auth
     'corsheaders',
     # custom apps
     'orders',
-    'deliveryboys',
     
 ]
 
@@ -137,6 +137,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'orders.User'
 
 # https://simpleisbetterthancomplex.com/tutorial/2018/11/22/how-to-implement-token-authentication-using-django-rest-framework.html#implementing-the-token-authentication
 REST_FRAMEWORK = {

@@ -1,0 +1,75 @@
+[{
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+        "item": "vadakkencherry",
+        "location": "SRID=4326;POINT (24.452545489 49.8782482189424)",
+        "status": "pending"
+    }
+},
+{
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+        "item": "vadakkencherry",
+        "location": "SRID=4326;POINT (24.452545489 49.8782482189424)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+        "item": "marriage at rolex",
+        "location": "SRID=4326;POINT (76.48688 10.59394)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+        "item": "shopping at reliance",
+        "location": "SRID=4326;POINT (76.47669999999999 10.59045)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 5,
+    "fields": {
+        "item": "petrol at indianoil thenidukku",
+        "location": "SRID=4326;POINT (76.47037 10.59098)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 6,
+    "fields": {
+        "item": "toll at panniyankara",
+        "location": "SRID=4326;POINT (76.45871 10.59136)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 7,
+    "fields": {
+        "item": "hotel at diana",
+        "location": "SRID=4326;POINT (76.47405000000001 10.59133)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 8,
+    "fields": {
+        "item": "school at cherupushpam",
+        "location": "SRID=4326;POINT (76.48478 10.59269)",
+        "status": "pending"
+    }
+}, {
+    "model": "orders.order",
+    "pk": 9,
+    "fields": {
+        "item": "hotel at malabar",
+        "location": "SRID=4326;POINT (76.49155 10.60263)",
+        "status": "delivered"
+    }
+}
+]
